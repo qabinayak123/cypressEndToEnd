@@ -11,4 +11,10 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-        command: num run test-addToCart
+          command: num run test-addToCart
+      - name: Cypress Test Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: mocha-awesome-html-report
+          path: cypress/reports/html # or path/to/artifact
+        
